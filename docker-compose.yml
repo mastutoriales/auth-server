@@ -1,0 +1,10 @@
+version: "3"
+services:
+  auth:
+    image: auth-server:latest
+    container_name: auth
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./.env:/home/node/app/.env
